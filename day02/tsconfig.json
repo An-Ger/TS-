@@ -1,0 +1,53 @@
+{
+  /*
+    配置选项
+    include,指定编译文件,编译day02所有文件
+    **表示任意目录，*表示任意文件
+    exclude表示不包含
+    默认值：["node_modules, "bower_components", "jspm_packages"]
+    files可以指定文件，类似于include
+    */
+    "include": [
+        "../day02/**/*"
+    ],
+    // "exclude": [
+    //     "../day01/**/*"
+    // ]
+    //编译器选项
+    "compilerOptions": {
+        //用来指定编译版本
+        "target": "ES3",
+        //模块化，存在不同解决方案,模块化规范
+        //给一个错误的值，就可以看到可以编译的规范版本
+        "module": "system",
+        //指定项目中使用的库
+        "lib": [
+            "DOM"
+        ],
+        //指定编译后文件所在的目录
+        "outDir": "dist",
+        //将代码合并为一个文件
+        //设置后，所有的文件代码都会在一个文件
+        "outFile": "dist/app.js",
+        //是否对js文件进行编译
+        "allowJs": false,
+        //检查js代码是否符合规范
+        "checkJs": false,
+        //是否移除注释
+        "removeComments": false,
+        //不生成编译后的文件
+        "noEmit": false,
+        //有错误的时候不生成编译文件
+        "noEmitOnError": false,
+        //严格模式，也可以用"use strict"
+        "alwaysStrict": false,
+        //不指定类型的时候默认类型为any,设置为true，不允许隐式any类型
+        "noImplicitAny": false,
+        //不允许不确定类型this
+        "noImplicitThis": false,
+        //严格检查空类型
+        "strictNullChecks": false,
+        //所有严格检查的总开关，检查所有的strict要求
+        "strict": false
+    }
+}
